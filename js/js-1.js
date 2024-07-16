@@ -109,23 +109,41 @@
 // }
 // console.log(`ЗП загальна - ${totalSalery}`);
 
-5/1
+// 5/1
 
-const min = 6;
-const max = 20;
-let total = 0;
+// const min = 6;
+// const max = 20;
+// let total = 0;
 
-for (let i = min; i < max; i += 1) {
-    console.log(i);
+// for (let i = min; i < max; i += 1) {
+//     console.log(i);
 
-    if (i % 2 === 0) {
-        console.log('парне', i)
+//     if (i % 2 !== 0) {
+//         console.log('непарне', i)
+//         continue;}
+    
+         
+//     console.log('парне', i)
+//     total += i;
+// }
+ 
         
-        total += i;      
-    } else ( 
-        console.log('непарне', i)  )
-   
+// console.log('сума парних', total)
+
+// 5/2
+
+let balance = 10000;
+const payment = 12000;
+
+console.log(`Загальна сума покупки складає ${payment}. Перевіряємо доступний баланс на карті.`)
+
+if (payment <= balance) {
+    console.log('Ok');
+
+    balance -= payment;
+    console.log(`На рахунку залишилось ${balance} коштів.`);
+} else {
+    console.log(`На рахунку не достатньо коштів.`);
 }
-console.log('сума парних', total)
 
 
