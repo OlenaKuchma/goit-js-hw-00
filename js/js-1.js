@@ -131,19 +131,41 @@
 // console.log('сума парних', total)
 
 // 5/2
+// let balance = 10000;
+// const payment = 12000;
 
-let balance = 10000;
-const payment = 12000;
+// console.log(`Загальна сума покупки складає ${payment}. Перевіряємо доступний баланс на карті.`)
 
-console.log(`Загальна сума покупки складає ${payment}. Перевіряємо доступний баланс на карті.`)
+// if (payment <= balance) {
+//     console.log('Ok');
 
-if (payment <= balance) {
-    console.log('Ok');
+//     balance -= payment;
+//     console.log(`На рахунку залишилось ${balance} коштів.`);
+// } else {
+//     console.log(`На рахунку не достатньо коштів.`);
+// }
 
-    balance -= payment;
-    console.log(`На рахунку залишилось ${balance} коштів.`);
-} else {
-    console.log(`На рахунку не достатньо коштів.`);
+// 5/3
+const totalSpent = 3000;
+let payment = 500;
+let discount = 0;
+
+
+if (totalSpent <100) {
+    console.log(`Ви не партнер. Знижка 0%.`);
 }
 
-
+else if(totalSpent >= 100 && totalSpent < 1000)  {
+    console.log(`Бронзовий партнер. Знижка 2%.`);
+    discount = 0.02;
+    
+} else if (totalSpent >= 1000 && totalSpent < 5000)  {
+    console.log(`Срібний партнер. Знижка 5%.`);
+    discount = 0.05;
+}
+    else {
+        console.log(`Золотий партнер. Знижка 10%.`);
+    discount = 0.1;
+}
+    
+console.log(`Офорляємо замовлення на суму ${payment} зі знижкою ${discount * 100}`)
