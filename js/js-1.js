@@ -10,7 +10,7 @@
 
 //  let result = base ** power;
 //  console.log(result);
- 
+
 
 // 2
 // const max = 9;
@@ -105,7 +105,7 @@
 // console.log(`ЗП працівника ${i} - ${salery}`);
 
 // totalSalery += salery;
-    
+
 // }
 // console.log(`ЗП загальна - ${totalSalery}`);
 
@@ -121,13 +121,13 @@
 //     if (i % 2 !== 0) {
 //         console.log('непарне', i)
 //         continue;}
-    
-         
+
+
 //     console.log('парне', i)
 //     total += i;
 // }
- 
-        
+
+
 // console.log('сума парних', total)
 
 // 5/2
@@ -150,22 +150,19 @@ const totalSpent = 3000;
 let payment = 500;
 let discount = 0;
 
-
-if (totalSpent <100) {
-    console.log(`Ви не партнер. Знижка 0%.`);
-}
-
-else if(totalSpent >= 100 && totalSpent < 1000)  {
+if (totalSpent >= 100 && totalSpent < 1000) {
     console.log(`Бронзовий партнер. Знижка 2%.`);
     discount = 0.02;
-    
-} else if (totalSpent >= 1000 && totalSpent < 5000)  {
+
+} else if (totalSpent >= 1000 && totalSpent < 5000) {
     console.log(`Срібний партнер. Знижка 5%.`);
     discount = 0.05;
 }
-    else {
-        console.log(`Золотий партнер. Знижка 10%.`);
+else if (totalSpent => 5000) {
+    console.log(`Золотий партнер. Знижка 10%.`);
     discount = 0.1;
+} else {
+    console.log(`Ви не партнер. Знижка 0%.`);
 }
-    
+
 console.log(`Офорляємо замовлення на суму ${payment} зі знижкою ${discount * 100}`)
