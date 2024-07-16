@@ -94,4 +94,38 @@
 // console.log("Ціна", price);
 
 
+// 5
+// const minSalery = 500;
+// const maxSalery = 5000;
+// const employees = 4;
+// let totalSalery = 0; 
+
+// for (let i = 1; i <= 4; i += 1) {
+// const salery = Math.round(Math.random() * (maxSalery - minSalery) + minSalery);
+// console.log(`ЗП працівника ${i} - ${salery}`);
+
+// totalSalery += salery;
+    
+// }
+// console.log(`ЗП загальна - ${totalSalery}`);
+
+5/1
+
+const min = 6;
+const max = 20;
+let total = 0;
+
+for (let i = min; i < max; i += 1) {
+    console.log(i);
+
+    if (i % 2 === 0) {
+        console.log('парне', i)
+        
+        total += i;      
+    } else ( 
+        console.log('непарне', i)  )
+   
+}
+console.log('сума парних', total)
+
 
