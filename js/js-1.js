@@ -20,7 +20,33 @@
 // console.log(result);
 
 // 3
-const balance = 1000;
-const message = balance >= 0 ? "Позитивний баланс" : "Негативний баланс";
-console.log(message);
+// const balance = 1000;
+// const message = balance >= 0 ? "Позитивний баланс" : "Негативний баланс";
+// console.log(message);
+
+// 4
+ const stars = 3;
+ let price;
+
+ if (stars === 1) 
+ {price = 20;
+    console.log("Ціна", price);}
+ else if (stars === 2) 
+ {price = 30;
+    console.log("Ціна", price);}
+ else if (stars === 3) 
+ {price = 40;
+    console.log("Ціна", price);}
+ else if (stars === 4) 
+ {price = 50;
+    console.log("Ціна", price);}
+ else if (stars === 5) 
+ {price = 50;
+    console.log("Ціна", price);}
+
+ else {console.log("Такої кількості зірок нема");}
+
+ 
+
+
 
