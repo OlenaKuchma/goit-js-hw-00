@@ -143,13 +143,27 @@
 // console.log(newString);
 
 // 6/2
-const arr1 = [3, 7, 8, 9];
-const arr2 = [88, 96, 34, 777, 99];
-let total = 0;
+// const arr1 = [3, 7, 8, 9];
+// const arr2 = [88, 96, 34, 777, 99];
+// let total = 0;
 
-const allArr = arr1.concat(arr2);
-for (const arr of allArr) {
-    total += arr; 
-}
-console.log(allArr);
-console.log(total);
+// const allArr = arr1.concat(arr2);
+// for (const arr of allArr) {
+//     total += arr; 
+// }
+// console.log(allArr);
+// console.log(total);
+
+// 7
+const carts = ['cart - 1', 'cart - 2', 'cart - 3', 'cart - 4', 'cart - 5']
+const cartToRemove = 'cart - 3';
+const cartToInput ='cart - 6';
+
+const i = carts.indexOf(cartToRemove);
+
+carts.splice(i, 1)
+
+carts.push(cartToInput);
+
+console.log(i);
+console.log(carts);
