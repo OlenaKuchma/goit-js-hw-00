@@ -20,9 +20,9 @@
 
 // 2
 
-const cart = [50, 71, 80, 123, 150, 340, 7, 8, 9, 10];
+// const cart = [50, 71, 80, 123, 150, 340, 7, 8, 9, 10];
 
-let total = 0;
+// let total = 0;
 
 // for (let i = 0; i < cart.length; i +=1) {
     
@@ -67,11 +67,11 @@ let total = 0;
 
 // 3
 
-const logins = ['ruruyryfhh', 'gqwqihxdkhnc', 'UTvhujYTYUJbg', 'JGI^Fvjku*'];
-const loginTofind = 'UTvhujYTYUJbg';
-let message = '';
+// const logins = ['ruruyryfhh', 'gqwqihxdkhnc', 'UTvhujYTYUJbg', 'JGI^Fvjku*'];
+// const loginTofind = 'UTvhujYTYUJbg';
+// let message = '';
 
-3/1
+// 3/1
 // for (let i = 0; i < logins.length; i +=1) {
 //     let login = logins[i];
 
@@ -82,7 +82,7 @@ let message = '';
 //    message = `Користувач ${loginTofind} не знайдений.`;
 // }
 
-3/2
+// 3/2
 // for (let login of logins) {
 //     if (login === loginTofind) {
 //         message = `Користувач ${loginTofind} знайдений.`;
@@ -92,7 +92,64 @@ let message = '';
     
 // }
 
-3/3 
-message = logins.includes(loginTofind) ? `Користувач ${loginTofind} знайдений.` : `Користувач ${loginTofind} не знайдений.`;
+// 3/3 
+// message = logins.includes(loginTofind) ? `Користувач ${loginTofind} знайдений.` : `Користувач ${loginTofind} не знайдений.`;
 
-console.log(message);
+// console.log(message);
+
+// 4
+// const numbers = [50, 71, 80, 123, 150, 340, 7, 8, 9, 10];
+
+// let smallerNumber = numbers[0];
+
+// for (let number of numbers) {
+    
+//     if (number < smallerNumber) {
+//         smallerNumber = number;
+//     }
+// }
+
+// console.log(smallerNumber);
+
+// 5
+
+// const friends = ['Mango', 'Poli', 'Kiwi', 'Ajax'];
+// console.log(friends);
+
+// const newFriends = friends.join(',');
+
+// console.log(newFriends);
+
+// 6
+
+// const string = "JavaScript";
+// const letters = string.split('');
+// let newString = '';
+
+// console.log(letters);
+
+// for (const letter of letters) {
+//     newString += letter === letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase();
+     
+// }
+
+// console.log(newString);
+
+// 6/1
+// const string = "JavaScript is a computer program";
+// console.log(string);
+
+// const newString = string.toLowerCase().split(' ').join('-');
+// console.log(newString);
+
+// 6/2
+const arr1 = [3, 7, 8, 9];
+const arr2 = [88, 96, 34, 777, 99];
+let total = 0;
+
+const allArr = arr1.concat(arr2);
+for (const arr of allArr) {
+    total += arr; 
+}
+console.log(allArr);
+console.log(total);
