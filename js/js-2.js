@@ -155,15 +155,45 @@
 // console.log(total);
 
 // 7
-const carts = ['cart - 1', 'cart - 2', 'cart - 3', 'cart - 4', 'cart - 5']
-const cartToRemove = 'cart - 3';
-const cartToInput ='cart - 6';
+// const carts = ['cart - 1', 'cart - 2', 'cart - 3', 'cart - 4', 'cart - 5']
+// const cartToRemove = 'cart - 3';
+// const cartToInput ='cart - 6';
 
-const i = carts.indexOf(cartToRemove);
+// const i = carts.indexOf(cartToRemove);
 
-carts.splice(i, 1)
+// carts.splice(i, 1)
 
-carts.push(cartToInput);
+// carts.push(cartToInput);
 
-console.log(i);
-console.log(carts);
+// carts.splice(0, 0, cartToInput)
+
+// console.log(i);
+// console.log(carts);
+
+// 8 function
+const add = function  (x, y) {
+    console.log(x);
+    console.log(y);
+
+    const result = x + y;
+
+    console.log('Виконується фунція add');
+    
+
+    return result;
+}
+const r1 = add(5, 9);
+console.log("r1", r1);
+
+const fnA = function (params) {
+    console.log('Виконується фунція fnA');
+}
+fnA();
+const fnB = function (params) {
+    console.log('Виконується фунція fnB');
+}
+fnB();
+const fnC = function (params) {
+    console.log('Виконується фунція fnC');
+}
+fnC();
