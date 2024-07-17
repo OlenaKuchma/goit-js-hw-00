@@ -146,23 +146,27 @@
 // }
 
 // 5/3
-const totalSpent = 3000;
-let payment = 500;
-let discount = 0;
+// let totalSpent = 3000;
+// let payment = 500;
+// let discount = 0;
 
-if (totalSpent >= 100 && totalSpent < 1000) {
-    console.log(`Бронзовий партнер. Знижка 2%.`);
-    discount = 0.02;
+// if (totalSpent >= 100 && totalSpent < 1000) {
+//     console.log(`Бронзовий партнер. Знижка 2%.`);
+//     discount = 0.02;
 
-} else if (totalSpent >= 1000 && totalSpent < 5000) {
-    console.log(`Срібний партнер. Знижка 5%.`);
-    discount = 0.05;
-}
-else if (totalSpent => 5000) {
-    console.log(`Золотий партнер. Знижка 10%.`);
-    discount = 0.1;
-} else {
-    console.log(`Ви не партнер. Знижка 0%.`);
-}
+// } else if (totalSpent >= 1000 && totalSpent < 5000) {
+//     console.log(`Срібний партнер. Знижка 5%.`);
+//     discount = 0.05;
+// }
+// else if (totalSpent => 5000) {
+//     console.log(`Золотий партнер. Знижка 10%.`);
+//     discount = 0.1;
+// } else {
+//     console.log(`Ви не партнер. Знижка 0%.`);
+// }
 
-console.log(`Офорляємо замовлення на суму ${payment} зі знижкою ${discount * 100}`)
+// payment -= payment*discount;
+// totalSpent += payment;
+
+// console.log(`Офорляємо замовлення на суму ${payment} зі знижкою ${discount * 100}`);
+// console.log(totalSpent);
