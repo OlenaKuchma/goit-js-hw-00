@@ -50,4 +50,15 @@
 // console.log(colorPicerData);
 
 // 4
-const fn 
+const playlist = {
+    name: 'My mysic',
+    rating: 3,
+    tracks: ['one', 'two', 'three'],
+    trackCount: 3,
+    getName: function () {
+        console.log('Це функція');
+    }
+
+}
+
+console.log(playlist);
