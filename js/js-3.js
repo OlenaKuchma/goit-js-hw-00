@@ -113,14 +113,23 @@ const feadback = {
 
 }
 let totalFeadback = 0;
-const keys = Object.keys(feadback);
 
-for (const key of keys) {
+// 5/1
+// const keys = Object.keys(feadback);
+
+// for (const key of keys) {
     
-    console.log(keys);
-    console.log(feadback[key]);
-    totalFeadback += feadback[key];
-}
-console.log(keys);
-console.log(totalFeadback);
+//     console.log(keys);
+//     console.log(feadback[key]);
+//     totalFeadback += feadback[key];
+// }
+// console.log(keys);
+// console.log(totalFeadback);
 
+
+// 5/2
+const values = Object.values(feadback);
+for (const value of values) {
+    totalFeadback += value;
+}
+console.log(totalFeadback);
