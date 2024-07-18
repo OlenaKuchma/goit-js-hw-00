@@ -220,18 +220,113 @@
 
 // 10
 
-const logins = ['ruruyryfhh', 'gqwqihxdkhnc', 'UTvhujYTYUJbg', 'JGI^Fvjku*'];
+// const logins = ['ruruyryfhh', 'gqwqihxdkhnc', 'UTvhujYTYUJbg', 'JGI^Fvjku*'];
 
 
-const findLogin = function (allLogins, loginTofind) {
+// const findLogin = function (allLogins, loginTofind) {
 
-    return allLogins.includes(loginTofind) ? `Користувач ${loginTofind} знайдений.` :
-        `Користувач ${loginTofind} не знайдений.`;
+//     return allLogins.includes(loginTofind) ? `Користувач ${loginTofind} знайдений.` :
+//         `Користувач ${loginTofind} не знайдений.`;
 
 
+// }
+
+// console.log(findLogin(logins, 'ruruyryfhh'));
+// console.log(findLogin(logins, 'gqwqihxdkhnc'));
+// console.log(findLogin(logins, 'TvhujYTYUJbg'));
+// console.log(findLogin(logins, 'JGI^Fvjku*'));
+
+// 11
+
+// const smallerN = function (numbers) {
+//     let smallerNumber = numbers[0];
+
+//     for (let number of numbers) {
+        
+//         if (number < smallerNumber) {
+//             smallerNumber = number;
+//         }
+//         }
+//     return smallerNumber;
+    
+// }
+
+// console.log(smallerN([50, 71, 80, 123, 150, 340, 7, 8, 9, 10]));
+// console.log(smallerN([50, 71, 1, 123, 3, 340, 0, 8, 9, 10]));
+// console.log(smallerN([50, 10000, 123, 150, 340, 1, 55, 9, 10]));
+
+
+// 12
+
+// const chengeString = function (string) {
+
+//     const letters = string.split('');
+//     let newString = '';
+
+//     for (const letter of letters) {
+//         newString += letter === letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase();
+// }
+// return newString;
+// }
+
+// console.log(chengeString('JavaScript'));
+// console.log(chengeString('CUYcyhcvhv'));
+// console.log(chengeString('KIINK Bnj jgbu'));
+// console.log(chengeString('vvbjbugGYYYY'));
+
+// 13
+
+// const slugify = function (string) {
+   
+// return string.toLowerCase().split(' ').join('-');
+    
+// }
+
+// console.log(slugify("cyvhb i  kesb ns kkki nhod o"));
+// console.log(slugify("jw bcj c wkfcheif efe"));
+
+// 14
+
+// const add = function (...args) {
+//    let total = 0;
+//    for (const arg of args) {
+//     total += arg;
+//    }
+   
+//     return total;
+    
+// }
+
+// console.log(add(3, 5, 8));
+// console.log(add(88, 99, 103, 44, 55));
+
+
+// 14/1
+
+// const fn = function (a,b,c, ...args) {
+//     console.log(`${a}, ${b}, ${c}`);
+//     console.log(args);
+// }
+
+// fn("word", 3, 5, 8, 9, 11, 55, 22);
+// fn('live', 'day', 88, 99, 103, 44, 55);
+
+// 14/2
+
+const filterNumbers = function (arr, ...args) {
+   console.log(arr);
+   console.log(args);
+
+   for (const element of arr) {
+    let newArr = [];
+            if (args.includes(element)) {
+            newArr.push(element);
+            
+    }
+    return newArr;
+   }
+   
 }
 
-console.log(findLogin(logins, 'ruruyryfhh'));
-console.log(findLogin(logins, 'gqwqihxdkhnc'));
-console.log(findLogin(logins, 'TvhujYTYUJbg'));
-console.log(findLogin(logins, 'JGI^Fvjku*'));
+console.log(filterNumbers([3, 5, 2, 1, 7, 55], 9, 33, 2, 3, 55, 68, 24));
+console.log(filterNumbers([3, 5, 55], 9, 3, 55, 33, 68, 24));
