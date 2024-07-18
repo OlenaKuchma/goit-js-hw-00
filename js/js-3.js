@@ -114,22 +114,81 @@ const feadback = {
 }
 let totalFeadback = 0;
 
-// 5/1
-// const keys = Object.keys(feadback);
+// // 5/1
+// // const keys = Object.keys(feadback);
 
-// for (const key of keys) {
+// // for (const key of keys) {
     
-//     console.log(keys);
-//     console.log(feadback[key]);
-//     totalFeadback += feadback[key];
+// //     console.log(keys);
+// //     console.log(feadback[key]);
+// //     totalFeadback += feadback[key];
+// // }
+// // console.log(keys);
+// // console.log(totalFeadback);
+
+
+// // 5/2
+// const values = Object.values(feadback);
+// for (const value of values) {
+//     totalFeadback += value;
 // }
-// console.log(keys);
 // console.log(totalFeadback);
 
 
-// 5/2
-const values = Object.values(feadback);
-for (const value of values) {
-    totalFeadback += value;
+
+// 6
+
+const friends = [
+    {name: 'Ola', online: true },
+    {name: 'Ivan', online: true },
+    {name: 'Oleg', online: false },
+    {name: 'Jenya', online: true },
+    {name: 'Lili', online: false },
+    {name: 'Kati', online: true },
+    {name: 'Sonny', online: false },
+    {name: 'Pavel', online: true },
+]
+
+console.table(friends);
+
+// for (const friend of friends) {
+//     console.log(friend);
+
+//     friend.newKey = 555;
+// }
+
+// console.table(friends);
+
+// 6/1
+// const findeFriendByName = function (allFriends, friendName) {
+//     for (const friend of allFriends) {
+//         // console.log(friend.name === name);
+
+//         if (friend.name === friendName) {
+//             return `Знайдено імя ${friendName} друга!`
+
+//         }
+//         return `Не знайдено імя ${friendName} друга!`
+//     }
+    
+
+// }
+
+// console.log(findeFriendByName(friends,'Jenya' ));
+// console.log(findeFriendByName(friends, 'Sonny'));
+// console.log(findeFriendByName(friends, 'Dan'));
+
+
+// 6/2
+const getFriendName = function (allFriends) {
+    
+    let names = [];
+
+    for (const friend of allFriends) 
+    {        
+    names.push(friend.name);
+    }
+    return names;
+
 }
-console.log(totalFeadback);
+console.log(getFriendName(friends));
