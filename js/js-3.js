@@ -36,15 +36,15 @@
 
 // 3
 
-const inputName = 'Color';
-const inputValue = 'tomato';
+// const inputName = 'Color';
+// const inputValue = 'tomato';
 
-const colorPicerData = {
-    [inputName]: inputValue,
-    month: 4,
-}
+// const colorPicerData = {
+//     [inputName]: inputValue,
+//     month: 4,
+// }
 
-colorPicerData.day = 7;
-colorPicerData.month = 7;
+// colorPicerData.day = 7;
+// colorPicerData.month = 7;
 
-console.log(colorPicerData);
+// console.log(colorPicerData);
