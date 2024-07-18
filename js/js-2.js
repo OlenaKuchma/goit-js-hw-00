@@ -313,20 +313,20 @@
 
 // 14/2
 
-const filterNumbers = function (arr, ...args) {
-   console.log(arr);
-   console.log(args);
+// const filterNumbers = function (arr, ...args) {
+//    console.log(arr);
+//    console.log(args);
 
-   for (const element of arr) {
-    let newArr = [];
-            if (args.includes(element)) {
-            newArr.push(element);
+//    for (const element of arr) {
+//     let newArr = [];
+//             if (args.includes(element)) {
+//             newArr.push(element);
             
-    }
-    return newArr;
-   }
+//     }
+//     return newArr;
+//    }
    
-}
+// }
 
-console.log(filterNumbers([3, 5, 2, 1, 7, 55], 9, 33, 2, 3, 55, 68, 24));
-console.log(filterNumbers([3, 5, 55], 9, 3, 55, 33, 68, 24));
+// console.log(filterNumbers([3, 5, 2, 1, 7, 55], 9, 33, 2, 3, 55, 68, 24));
+// console.log(filterNumbers([3, 5, 55], 9, 3, 55, 33, 68, 24));
