@@ -10,7 +10,7 @@
 //     friends[i] += '-1'
 
 //     console.table(friends[i]);
-    
+
 // }
 // 1/2
 // for (let friend of friends) {
@@ -25,9 +25,9 @@
 // let total = 0;
 
 // for (let i = 0; i < cart.length; i +=1) {
-    
+
 //     total += cart[i]
-    
+
 // }
 
 // або
@@ -40,13 +40,13 @@
 // console.log(total);
 
 // for (let i = 0; i < cart.length; i += 1) {
-    
+
 //     if (cart[i] % 2 !== 0) {
 //         continue;
 //     } else {
 //         total += cart[i];
 //     }
-    
+
 // }
 
 // for (const value of cart) {
@@ -59,7 +59,7 @@
 //     if (value % 2 !== 0) {
 //         continue;
 //     } 
-    
+
 //     total += value;
 // }
 
@@ -89,7 +89,7 @@
 //         break;
 //     } 
 //     message = `Користувач ${loginTofind} не знайдений.`;
-    
+
 // }
 
 // 3/3 
@@ -103,7 +103,7 @@
 // let smallerNumber = numbers[0];
 
 // for (let number of numbers) {
-    
+
 //     if (number < smallerNumber) {
 //         smallerNumber = number;
 //     }
@@ -130,7 +130,7 @@
 
 // for (const letter of letters) {
 //     newString += letter === letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase();
-     
+
 // }
 
 // console.log(newString);
@@ -171,29 +171,67 @@
 // console.log(carts);
 
 // 8 function
-const add = function  (x, y) {
-    console.log(x);
-    console.log(y);
+// const add = function  (x, y) {
+//     console.log(x);
+//     console.log(y);
 
-    const result = x + y;
+//     const result = x + y;
 
-    console.log('Виконується фунція add');
-    
+//     console.log('Виконується фунція add');
 
-    return result;
-}
-const r1 = add(5, 9);
-console.log("r1", r1);
 
-const fnA = function (params) {
-    console.log('Виконується фунція fnA');
+//     return result;
+// }
+// const r1 = add(5, 9);
+// console.log("r1", r1);
+
+// const fnA = function (params) {
+//     console.log('Виконується фунція fnA');
+// }
+// fnA();
+// const fnB = function (params) {
+//     console.log('Виконується фунція fnB');
+// }
+// fnB();
+// const fnC = function (params) {
+//     console.log('Виконується фунція fnC');
+// }
+// fnC();
+
+
+// 9
+
+// const calculateTotalPrice = function (items) {
+//     console.log("items", items);
+
+//     let total = 0;
+
+//     for (const item of items) {
+//         total += item;
+//     }
+//     return total;
+
+// }
+
+// console.log(calculateTotalPrice([30, 69, 70]));
+// console.log(calculateTotalPrice([33, 70, 89, 40]));
+// console.log(calculateTotalPrice([311, 256, 878, 900, 33]));
+
+
+// 10
+
+const logins = ['ruruyryfhh', 'gqwqihxdkhnc', 'UTvhujYTYUJbg', 'JGI^Fvjku*'];
+
+
+const findLogin = function (allLogins, loginTofind) {
+
+    return allLogins.includes(loginTofind) ? `Користувач ${loginTofind} знайдений.` :
+        `Користувач ${loginTofind} не знайдений.`;
+
+
 }
-fnA();
-const fnB = function (params) {
-    console.log('Виконується фунція fnB');
-}
-fnB();
-const fnC = function (params) {
-    console.log('Виконується фунція fnC');
-}
-fnC();
+
+console.log(findLogin(logins, 'ruruyryfhh'));
+console.log(findLogin(logins, 'gqwqihxdkhnc'));
+console.log(findLogin(logins, 'TvhujYTYUJbg'));
+console.log(findLogin(logins, 'JGI^Fvjku*'));
