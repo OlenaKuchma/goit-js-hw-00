@@ -50,15 +50,39 @@
 // console.log(colorPicerData);
 
 // 4
+// const playlist = {
+//     name: 'My mysic',
+//     rating: 3,
+//     tracks: ['one', 'two', 'three'],
+//     trackCount: 3,
+//     // getName: function () {
+//     //     console.log('Це функція');
+//     // },
+//     getName () {
+//         console.log('Це функція');
+//     }
+
+
+
+// }
+
+console.log(playlist);
+
+// 4/1
+
 const playlist = {
     name: 'My mysic',
     rating: 3,
     tracks: ['one', 'two', 'three'],
     trackCount: 3,
-    getName: function () {
-        console.log('Це функція');
+    changeName (newName) {
+        console.log('Це функція зміни імені');
+
+        this.name = newName;
     }
 
 }
 
 console.log(playlist);
+
+playlist.changeName('Нове імя')
