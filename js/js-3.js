@@ -65,24 +65,54 @@
 
 
 // }
+// console.log(playlist);
 
-console.log(playlist);
 
 // 4/1
 
-const playlist = {
-    name: 'My mysic',
-    rating: 3,
-    tracks: ['one', 'two', 'three'],
-    trackCount: 3,
-    changeName (newName) {
-        console.log('Це функція зміни імені');
+// const playlist = {
+//     name: 'My mysic',
+//     rating: 3,
+//     tracks: ['one', 'two', 'three'],
+//     trackCount: 3,
+//     changeName (newName) {
+//         console.log('Це функція зміни імені');
 
-        this.name = newName;
-    }
+//         this.name = newName;
+//     },
+
+//     addTrack (newTrack) {
+//         this.tracks.push(newTrack);
+        
+//     },
+
+//     updateRating (newReting) {
+//         this.rating = newReting
+//     },
+
+//     getTrackCount () {
+//         return this.tracks.length;
+//     }
+
+
+// }
+
+
+// playlist.changeName('Нове імя');
+// playlist.addTrack('Новий трек');
+// playlist.updateRating(7);
+// console.log(playlist);
+// console.log(playlist.getTrackCount());
+
+
+// 5
+const feadback = {
+    good: 3,
+    natural: 6,
+    bad: 9,
 
 }
 
-console.log(playlist);
+const keys = Object.keys(feadback);
 
-playlist.changeName('Нове імя')
+console.log(keys);
