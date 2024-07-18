@@ -112,7 +112,15 @@ const feadback = {
     bad: 9,
 
 }
-
+let totalFeadback = 0;
 const keys = Object.keys(feadback);
 
+for (const key of keys) {
+    
+    console.log(keys);
+    console.log(feadback[key]);
+    totalFeadback += feadback[key];
+}
 console.log(keys);
+console.log(totalFeadback);
+
