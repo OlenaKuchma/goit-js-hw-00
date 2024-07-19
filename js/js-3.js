@@ -302,19 +302,166 @@
 // 8/2
 
 
-const playlist = {
-    name: 'My mysic',
-    rating: 3,
-    tracks: ['one', 'two', 'three'],
-    trackCount: 3,
-       };
+// const playlist = {
+//     name: 'My mysic',
+//     rating: 3,
+//     tracks: ['one', 'two', 'three'],
+//     trackCount: 3,
+//     stats: {
+//         followers: 2,
+//         views: 4,
+//         likes: 7
+//     }
 
-    console.log(playlist);
+
+//        };
+
+//     console.log(playlist);
 
 
-    const { name, rating, tracks: listOftracks, trackCount = 3, autor = 'user' } = playlist;
+//     // const { name, rating, tracks: listOftracks, trackCount: countOfTrack = 0, autor = 'user', stats } = playlist;
+//     // const {followers, views, likes} = stats;
 
-    console.log(listOftracks);
+//     const { name, rating, tracks: listOftracks, trackCount: countOfTrack = 0, autor = 'user', stats: {followers, views, likes} } = playlist;
+
+//     console.log(name, listOftracks, followers, views, likes);
+//     console.log(countOfTrack);
+
+
+// 8/3
+
+//  const autors = {
+//     kiwi: 4,
+//     poly: 7,
+//     ajax: 9,
+//     mango: 5,
+
+//  }
+//  const entries = Object.entries(autors);
+ 
+//  for (const entrie of entries) {
+    // const [name, rating] = entrie;
+    // console.log(name, rating);
+// або
+//     const name = entrie[0];
+//     const rating = entrie[1];
+
+//     console.log(name, rating);
+    
+//  }
+
+ // або
+
+//  for (const [name, rating] of entries) {
+   
+//     console.log(name, rating);
+
+    
+//  }
+
+// 8/4
+
+// const playlist = {
+//     name: 'My mysic',
+//     rating: 3,
+//     tracks: ['one', 'two', 'three'],
+//     trackCount: 3,
+//     stats: {
+//         followers: 2,
+//         views: 4,
+//         likes: 7
+//     }
+
+   
+//        };
+//        console.log(playlist);
+
+// const { name, tracks, ...restProps } = playlist;
+
+//     console.log(restProps);
+
+    // 8/5
+
+    // const showProfileInfo = function (playlist) {
+
+    //     const { name, rating, tracks, trackCount, stats: {followers,  views, likes } } = playlist;
+    //     console.log(name, rating, tracks, trackCount, followers,  views, likes);
+    // }
+
+    // const playlist = {
+    //     name: 'My mysic',
+    //     rating: 3,
+    //     tracks: ['one', 'two', 'three'],
+    //     trackCount: 3,
+    //     stats: {
+    //         followers: 2,
+    //         views: 4,
+    //         likes: 7
+    //     }
+    
+       
+    //        };
+    //     // console.log(playlist);
+
+    //     showProfileInfo(playlist);
+
+    // 9
+
+    const cart = {
+        items: [],
+        getItems() {
+            return this.items;
+        },
+        add(product) {
+            this.items.push(product);
+        },
+        remuve(productName) {
+            
+            for (let i = 0; i < this.items.length; i += 1) {
+                
+                console.log(this.items[i]);
+                // const item = this.items[i];
+                const { name } = this.items[i];
+
+
+                if (productName === name) {
+
+                            console.log(`Найшли цей ${productName} продукт.`);
+                        }
+            }
+            
+            
+            
+            // for (const item of this.items) {
+            //     console.log(item);
+
+            //     if (productName === item.name) {
+
+            //         console.log(`Найшли цей ${productName} продукт.`);
+            //     }
+            // }
+
+        },
+        clear() {},
+        countTotalPrice() {},
+        increaseQuantity(productName) {},
+        descrease(productName) {},
+
+
+    }
+
+    console.table(cart.getItems());
+
+    cart.add({name: 'tomato', price: 20});
+    cart.add({name: 'lime', price: 70});
+    cart.add({name: 'keake', price: 50});
+    cart.add({name: 'peach', price: 30});
+
+    console.table(cart.getItems());
+
+    cart.remuve('peach');
+
+    
 
 
 
