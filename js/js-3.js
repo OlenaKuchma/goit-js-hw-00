@@ -106,13 +106,13 @@
 
 
 // 5
-const feadback = {
-    good: 3,
-    natural: 6,
-    bad: 9,
+// const feadback = {
+//     good: 3,
+//     natural: 6,
+//     bad: 9,
 
-}
-let totalFeadback = 0;
+// }
+// let totalFeadback = 0;
 
 // // 5/1
 // // const keys = Object.keys(feadback);
@@ -138,18 +138,18 @@ let totalFeadback = 0;
 
 // 6
 
-const friends = [
-    {name: 'Ola', online: true },
-    {name: 'Ivan', online: true },
-    {name: 'Oleg', online: false },
-    {name: 'Jenya', online: true },
-    {name: 'Lili', online: false },
-    {name: 'Kati', online: true },
-    {name: 'Sonny', online: false },
-    {name: 'Pavel', online: true },
-]
+// const friends = [
+//     {name: 'Ola', online: true },
+//     {name: 'Ivan', online: true },
+//     {name: 'Oleg', online: false },
+//     {name: 'Jenya', online: true },
+//     {name: 'Lili', online: false },
+//     {name: 'Kati', online: true },
+//     {name: 'Sonny', online: false },
+//     {name: 'Pavel', online: true },
+// ]
 
-console.table(friends);
+// console.table(friends);
 
 // for (const friend of friends) {
 //     console.log(friend);
@@ -230,25 +230,91 @@ console.table(friends);
 
 // 6/4
 
-const getFriendByStatus = function (allFriends) {
+// const getFriendByStatus = function (allFriends) {
     
-    let statusFriends = {
-        online: [],
-        offLine: [],
-    };
+//     let statusFriends = {
+//         online: [],
+//         offLine: [],
+//     };
 
-    for (const friend of allFriends) 
-    {        
+//     for (const friend of allFriends) 
+//     {        
     
-        if (friend.online) {
-        statusFriends.online.push(friend);
-        continue
-    }
-        statusFriends.offLine.push(friend);
+//         if (friend.online) {
+//         statusFriends.online.push(friend);
+//         continue
+//     }
+//         statusFriends.offLine.push(friend);
      
-}
+// }
 
-return   statusFriends;
-}
+// return   statusFriends;
+// }
 
-console.log(getFriendByStatus(friends));
+// console.log(getFriendByStatus(friends));
+
+// 7
+
+// const x = {
+//     a: 1,
+//     b: 5,
+//     c: 9,
+//     d: 2,
+//     f: 4
+// }
+
+// const keyOfX = Object.keys(x).length;
+// console.log(keyOfX);
+
+
+// 8
+// const arr1 = [1,3,6,9,2,5];
+// const arr2 = [6, 99,55, 88, 254];
+
+// const numbers = arr1.concat(arr2);
+// console.log(arr1);
+// console.log(arr2);
+// console.log(numbers);
+
+
+// const numbersNew = [...arr1, 8, 9, 44, 88, 55, ...arr2];
+// console.log(Math.max(...numbersNew));
+// console.log(Math.min(...numbersNew));
+// console.log(numbersNew);
+
+// 8/1
+
+// const a = [{x: 1}, {y: 2}, {c: 0}];
+// const b = [...a];
+
+// console.log('a', a);
+// console.log('b', b);
+
+// console.log(a[0] === b[0]);
+// console.log(a === b);
+
+// a[0].x = 1000;
+// a[1].y = 10000;
+
+// console.log('a', a);
+// console.log('b', b);
+
+// 8/2
+
+
+const playlist = {
+    name: 'My mysic',
+    rating: 3,
+    tracks: ['one', 'two', 'three'],
+    trackCount: 3,
+       };
+
+    console.log(playlist);
+
+
+    const { name, rating, tracks: listOftracks, trackCount = 3, autor = 'user' } = playlist;
+
+    console.log(listOftracks);
+
+
+
