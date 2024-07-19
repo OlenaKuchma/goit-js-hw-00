@@ -413,24 +413,39 @@
             return this.items;
         },
         add(product) {
-            this.items.push(product);
+
+            for (const item of this.items) {
+                if (item.name === product.name) {
+                    item.quantity += 1;
+                    
+                    return;
+                }
+            }
+
+            const newProduct = {
+                ...product,
+                quantity: 1,
+            }
+
+            this.items.push(newProduct);
         },
         remuve(productName) {
             
-            for (let i = 0; i < this.items.length; i += 1) {
+            const { items } = this;
+            for (let i = 0; i < items.length; i += 1) {
                 
-                console.log(this.items[i]);
+                console.log(items[i]);
                 // const item = this.items[i];
-                const { name } = this.items[i];
+                const { name } = items[i];
 
 
                 if (productName === name) {
 
                             console.log(`Найшли цей ${productName} продукт.`);
+                            items.splice(i, 1);
                         }
             }
-            
-            
+                      
             
             // for (const item of this.items) {
             //     console.log(item);
@@ -442,24 +457,70 @@
             // }
 
         },
-        clear() {},
-        countTotalPrice() {},
+        clear() {
+
+            this.items = [];
+        },
+        countTotalPrice() {
+
+            console.log(this.items);
+            const { items } = this;
+            let total = 0;
+
+            for (const { price, quantity} of items) {
+                 
+                total += price * quantity;
+
+                
+            }
+            
+            return total;
+            
+
+        },
+
         increaseQuantity(productName) {},
-        descrease(productName) {},
+        descreaseQuantity(productName) {},
+
+        
 
 
     }
 
-    console.table(cart.getItems());
+    // console.table(cart.getItems());
 
     cart.add({name: 'tomato', price: 20});
     cart.add({name: 'lime', price: 70});
     cart.add({name: 'keake', price: 50});
     cart.add({name: 'peach', price: 30});
+    cart.add({name: 'lime', price: 70});
+    cart.add({name: 'keake', price: 50});
+    cart.add({name: 'peach', price: 30});
+    cart.add({name: 'lime', price: 70});
+    cart.add({name: 'keake', price: 50});
+    cart.add({name: 'peach', price: 30});
+    cart.add({name: 'tomato', price: 20});
+    cart.add({name: 'keake', price: 50});
+    cart.add({name: 'peach', price: 30});
 
     console.table(cart.getItems());
 
-    cart.remuve('peach');
+    // console.log(cart.getItems());
+
+  
+    // cart.remuve('peach');
+
+    // console.table(cart.getItems());
+    
+    // cart.clear();
+
+
+    cart.countTotalPrice();
+
+    console.log('total', cart.countTotalPrice());
+
+    
+
 
     
 
