@@ -180,15 +180,75 @@ console.table(friends);
 
 
 // 6/2
-const getFriendName = function (allFriends) {
+// const getFriendName = function (allFriends) {
     
-    let names = [];
+//     let names = [];
+
+//     for (const friend of allFriends) 
+//     {        
+//     names.push(friend.name);
+//     }
+//     return names;
+
+// }
+// console.log(getFriendName(friends));
+
+// 6/2
+// const getFriendOnline = function (allFriends) {
+    
+//     let onlineFriends = [];
+
+//     for (const friend of allFriends) 
+//     {        
+//     if (friend.online === true) {
+//         onlineFriends.push(friend);
+//     }
+        
+//     }
+//     return onlineFriends;
+
+// }
+// console.log(getFriendOnline(friends));
+
+// 6/3
+// const getFriendOffline = function (allFriends) {
+    
+//     let offlineFriends = [];
+
+//     for (const friend of allFriends) 
+//     {        
+//     if (!friend.online) {
+//         offlineFriends.push(friend);
+//     }
+        
+//     }
+//     return offlineFriends;
+
+// }
+// console.log(getFriendOffline(friends));
+
+
+// 6/4
+
+const getFriendByStatus = function (allFriends) {
+    
+    let statusFriends = {
+        online: [],
+        offLine: [],
+    };
 
     for (const friend of allFriends) 
     {        
-    names.push(friend.name);
+    
+        if (friend.online) {
+        statusFriends.online.push(friend);
+        continue
     }
-    return names;
-
+        statusFriends.offLine.push(friend);
+     
 }
-console.log(getFriendName(friends));
+
+return   statusFriends;
+}
+
+console.log(getFriendByStatus(friends));
