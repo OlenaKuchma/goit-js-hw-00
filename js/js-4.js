@@ -62,6 +62,11 @@
 // const r2 = filter([1,44, 4, 3, 22, 7, 33, 5], function(value) { return value <= 4;
     
 // });
+
+// або 
+// const r2 = filter([1,44, 4, 3, 22, 7, 33, 5], value => value <= 4);
+
+
 // console.log(r2);
 
 // const fruits = [
@@ -78,6 +83,10 @@
 // }
 
 // const r3 = filter(fruits, getFruitQuantity);
+
+// або 
+
+// const r3 = filter(fruits, fruits => fruits.quantiti > 200);
 
 // console.table(r3);
 
@@ -142,29 +151,35 @@
 
 // 6
 
-const salaryManagerFactory = function (employeeName, baseSalary) {
+// const salaryManagerFactory = function (employeeName, baseSalary) {
 
-    let salary = baseSalary;
+//     let salary = baseSalary;
 
-    const chengeBy = function (amount) {
-        salary += amount;
-    }
-  return {
-    raise(amount) {
-        changeBy(emount);
-    },
-    lower(amount) {
-        changeBy(emount);
+//     const changeBy = function (amount) {
+//         salary += amount;
+//     };
+
+//   return {
+//     raise(amount) {
+//         changeBy(amount);
+//     },
+//     lower(amount) {
+//         changeBy(amount);
     
-    },
+//     },
 
-    current () {
-         return `Теперішня зарплата ${employeeName} - ${salary}.`
-    }
-  }
+//     current () {
+//          return `Теперішня зарплата ${employeeName} - ${salary}.`
+//     }
+//   }
 
-}
+// }
+//  const salaryManager = salaryManagerFactory('Mango', 5000);
+ 
+//  console.log(salaryManager.current());
 
+
+// ------------------------------------
 // const myLib = {
 //     value123: 0,
 //     add(num) {
@@ -178,9 +193,88 @@ const salaryManagerFactory = function (employeeName, baseSalary) {
 // myLib.add(5);
 
 // console.log(myLib.getValue());
+// ----------------------------------------------------
+// const myLibFactory = function () {
+
+//   let value = 0;
+
+//   const add = function (num) {
+
+//     value += num;
+    
+//   };
+
+//   return {
+
+//     add: add,
+//     getValue () {
+//       return value;
+//     },
+//   };
+// };
+
+// const myLib = myLibFactory();
+
+// console.log(myLib);
+// console.log(myLib.getValue());
+// myLib.add(10);
+// console.log(myLib.getValue());
 
 
+// 7
+
+const add = function (a, b, c) {
+
+console.log(a, b, c);
+
+return a+b+c;
+
+}
+console.log(add(5,10,12));
+
+// -------------------
+
+const add2 = (a2, b2, c2) => {
+  console.log(a2, b2, c2);
+
+return a2+b2+c2;
+}
+//-------------------
+const add5 = (a5, b5, c5) => a5+b5+c5;
+//-------------------
+
+console.log(add2(5,10,12));
+
+// -------------------
+
+const add3 = a3 => {
+  console.log(a3);
+
+return a3;
+};
 
 
+console.log(add3(5));
 
+// -------------------
 
+const add4 = () => {
+  console.log('');
+  return 'a4';
+
+};
+
+console.log(add4(77));
+
+// -------------
+
+const addArrow = (...args) => {
+  console.log(args);
+}
+
+console.log(addArrow());
+
+// -------
+const arrowfnA = () => ({arrowA: 4});
+
+console.log(arrowfnA());
