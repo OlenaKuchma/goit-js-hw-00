@@ -78,14 +78,14 @@
 
     // -------------------- filter
 
-    const numbers = [5, 10, 15, 20, 25];
-    const filteredNumbers = numbers.filter(number => {
-        console.log(number);
+    // const numbers = [5, 10, 15, 20, 25];
+    // const filteredNumbers = numbers.filter(number => {
+    //     console.log(number);
 
-        return number > 10;
-    });
+    //     return number > 10;
+    // });
 
-    console.log(filteredNumbers);
+    // console.log(filteredNumbers);
 
 
     const players = [
@@ -97,9 +97,43 @@
         
          ];
     
-         const onlinePlayers = players.filter(player => player.online);
+         const onlinePlayers = players.filter(({online}) => online);
          const offlinePlayers = players.filter(player => !player.online);
 
  console.table(onlinePlayers);
  console.table(offlinePlayers);
+
+ const filterByTimePlayers = players.filter(({timePlayed}) => timePlayed > 250);
+
+ console.table(filterByTimePlayers);
+
+
+//  ------------------find
+
+const playerToFind = 'player-5';
+
+
+const findPlayer = players.find(({id}) => id === playerToFind);
+
+console.log(findPlayer);
+
+// ------------------Function of find
+
+const fuFindPlayer = (players, playerId) => {
+    return players.find(player => player.id === playerId);
+}
  
+console.log(fuFindPlayer(players, 'player-1'));
+console.log(fuFindPlayer(players, 'player-3'));
+
+// ---------------every / some
+
+const isAllOnline = players.every(({online}) => online);
+
+console.log(isAllOnline);
+
+const isAnyOnline = players.some(({online}) => online);
+
+console.log(isAnyOnline);
+
+// -----------
