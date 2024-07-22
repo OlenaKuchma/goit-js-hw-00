@@ -88,52 +88,71 @@
     // console.log(filteredNumbers);
 
 
-    const players = [
-            { id: 'player-1', name: "Mango", timePlayed: 1270, points: 4, online: true },
-            { id: 'player-2', name: "Poly", timePlayed: 469, points: 2, online: false },
-            { id: 'player-3', name: "Ajax", timePlayed: 690, points: 3, online: true },
-            { id: 'player-4', name: "Kiwi", timePlayed: 241, points: 1, online: false },
-            { id: 'player-5', name: "Tony", timePlayed: 641, points: 7, online: false },
+    // const players = [
+    //         { id: 'player-1', name: "Mango", timePlayed: 1270, points: 4, online: true },
+    //         { id: 'player-2', name: "Poly", timePlayed: 469, points: 2, online: false },
+    //         { id: 'player-3', name: "Ajax", timePlayed: 690, points: 3, online: true },
+    //         { id: 'player-4', name: "Kiwi", timePlayed: 241, points: 1, online: false },
+    //         { id: 'player-5', name: "Tony", timePlayed: 641, points: 7, online: false },
         
-         ];
+    //      ];
     
-         const onlinePlayers = players.filter(({online}) => online);
-         const offlinePlayers = players.filter(player => !player.online);
+//          const onlinePlayers = players.filter(({online}) => online);
+//          const offlinePlayers = players.filter(player => !player.online);
 
- console.table(onlinePlayers);
- console.table(offlinePlayers);
+//  console.table(onlinePlayers);
+//  console.table(offlinePlayers);
 
- const filterByTimePlayers = players.filter(({timePlayed}) => timePlayed > 250);
+//  const filterByTimePlayers = players.filter(({timePlayed}) => timePlayed > 250);
 
- console.table(filterByTimePlayers);
-
-
-//  ------------------find
-
-const playerToFind = 'player-5';
+//  console.table(filterByTimePlayers);
 
 
-const findPlayer = players.find(({id}) => id === playerToFind);
+// //  ------------------find
 
-console.log(findPlayer);
+// const playerToFind = 'player-5';
 
-// ------------------Function of find
 
-const fuFindPlayer = (players, playerId) => {
-    return players.find(player => player.id === playerId);
-}
+// const findPlayer = players.find(({id}) => id === playerToFind);
+
+// console.log(findPlayer);
+
+// // ------------------Function of find
+
+// const fuFindPlayer = (players, playerId) => {
+//     return players.find(player => player.id === playerId);
+// }
  
-console.log(fuFindPlayer(players, 'player-1'));
-console.log(fuFindPlayer(players, 'player-3'));
+// console.log(fuFindPlayer(players, 'player-1'));
+// console.log(fuFindPlayer(players, 'player-3'));
 
 // ---------------every / some
 
-const isAllOnline = players.every(({online}) => online);
+// const isAllOnline = players.every(({online}) => online);
 
-console.log(isAllOnline);
+// console.log(isAllOnline);
 
-const isAnyOnline = players.some(({online}) => online);
+// const isAnyOnline = players.some(({online}) => online);
 
-console.log(isAnyOnline);
+// console.log(isAnyOnline);
 
-// -----------
+// -----------reduce
+
+
+const numbers = [5, 10, 15, 20, 25];
+
+const total = numbers.reduce((acc, number) => {
+    
+    console.log('number', number);
+    console.log('acc', acc);
+    
+    
+    return acc + number;
+}, 0);
+
+console.log(total);
+
+const total1 = numbers.reduce((acc, number) => acc + number, 0);
+
+console.log(total1);
+
