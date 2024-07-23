@@ -242,16 +242,30 @@
     // ---------sort
 
 
-    const numbers = [1, 3, 7, 2, 9, 11];
+    // const numbers = [1, 3, 7, 2, 9, 11];
 
-    const copyNumbers = [...numbers];
+    // const copyNumbers = [...numbers];
 
-    copyNumbers.sort((curEl, nextEl) => nextEl - curEl);
+    // copyNumbers.sort((curEl, nextEl) => nextEl - curEl);
 
-    console.log('copyNumbers', copyNumbers);
+    // console.log('copyNumbers', copyNumbers);
 
-    const laters = ['a', 'b', 'c', 'g', 's', 'f'];
+    // const laters = ['a', 'b', 'c', 'g', 's', 'f'];
 
-    laters.sort();
+    // laters.sort();
 
-    console.log('laters', laters);
+    // console.log('laters', laters);
+
+
+    const twets = [
+        {id: '001', likes: 5, tags: ['js', 'nodes', 'react',  'css']},
+        {id: '002', likes: 15, tags: ['js',  'react', 'html', 'css']},
+        {id: '003', likes: 45, tags: ['js', 'nodes', 'html']},
+        {id: '004', likes: 25, tags: ['js', 'nodes', 'react', 'html']},
+        {id: '005', likes: 57, tags: ['nodes', 'react', 'css']}
+          
+    ];
+
+    const sortTwets = [...twets].sort((curLikes, nextLikes) => nextLikes.likes - curLikes.likes);
+
+    console.table(sortTwets);
