@@ -257,15 +257,106 @@
     // console.log('laters', laters);
 
 
-    const twets = [
-        {id: '001', likes: 5, tags: ['js', 'nodes', 'react',  'css']},
-        {id: '002', likes: 15, tags: ['js',  'react', 'html', 'css']},
-        {id: '003', likes: 45, tags: ['js', 'nodes', 'html']},
-        {id: '004', likes: 25, tags: ['js', 'nodes', 'react', 'html']},
-        {id: '005', likes: 57, tags: ['nodes', 'react', 'css']}
+    // const twets = [
+    //     {id: '001', likes: 5, tags: ['js', 'nodes', 'react',  'css']},
+    //     {id: '002', likes: 15, tags: ['js',  'react', 'html', 'css']},
+    //     {id: '003', likes: 45, tags: ['js', 'nodes', 'html']},
+    //     {id: '004', likes: 25, tags: ['js', 'nodes', 'react', 'html']},
+    //     {id: '005', likes: 57, tags: ['nodes', 'react', 'css']}
           
-    ];
+    // ];
 
-    const sortTwets = [...twets].sort((curLikes, nextLikes) => nextLikes.likes - curLikes.likes);
+    // const sortTwets = [...twets].sort((curLikes, nextLikes) => nextLikes.likes - curLikes.likes);
 
-    console.table(sortTwets);
+    // console.table(sortTwets);
+
+    // ------------ flat flatmap
+
+
+    // const arr = [1, 4, [1, 4, 5, [4, 7, 2, 6]], [4, 9, [4, 8, 2]]];
+
+    // console.log(arr);
+    // console.log(arr.flat());
+    // console.log(arr.flat(3));
+
+    // const twets = [
+    //     {id: '001', likes: 5, tags: ['js', 'nodes', 'react',  'css']},
+    //     {id: '002', likes: 15, tags: ['js',  'react', 'html', 'css']},
+    //     {id: '003', likes: 45, tags: ['js', 'nodes', 'html']},
+    //     {id: '004', likes: 25, tags: ['js', 'nodes', 'react', 'html']},
+    //     {id: '005', likes: 57, tags: ['nodes', 'react', 'css']}
+          
+    // ];
+
+    // const tags = twets.map(t => t.tags).flat();
+    // console.log(tags);
+
+    // const tags2 = twets.flatMap(t => t.tags);
+    // console.log(tags2);
+
+
+    // ---------------- послідовність викликів методів
+
+    // const numbers = [1, 3, 7, 2, 9, 11];
+
+    // const newNumbers = numbers.filter(num => num > 2).map(num => num * 3).sort((a, b) => b - a);
+
+    // console.log('numbers', numbers);
+    // console.log('newNumbers', newNumbers);
+
+
+    // const players = [
+    //             { id: 'player-1', name: "Mango", timePlayed: 1270, points: 4, online: true },
+    //             { id: 'player-2', name: "Poly", timePlayed: 469, points: 2, online: false },
+    //             { id: 'player-3', name: "Ajax", timePlayed: 690, points: 3, online: true },
+    //             { id: 'player-4', name: "Kiwi", timePlayed: 241, points: 1, online: false },
+    //             { id: 'player-5', name: "Tony", timePlayed: 641, points: 7, online: false },
+            
+    //          ];
+    
+    // const sortedPlayers = players.filter(player => player.online).sort((a, b) => a.timePlayed - b.timePlayed);
+
+    // console.table(sortedPlayers);
+
+
+    // ------------ lodash......
+
+
+    // console.log(_);
+    // console.dir(_);
+
+
+    // console.log(_.isEmpty({}));
+
+
+    // const user = {
+    //     name: 'Mango',
+    //     location: {
+    //         coords: [1, 2],
+    //         city: 'Lviv'
+    //     },
+    // };
+
+    // console.log(_.get(user, 'location.city'));
+    // console.log(user?.location?.city);
+
+
+    // console.log(_.union([1, 2, 3], [3, 4, 5]));
+  
+    // console.log(_.range(3, 203, 10));
+
+    // const players = [
+    //                 { id: 'player-1', name: "Mango", timePlayed: 1270, points: 4, online: true },
+    //                 { id: 'player-2', name: "Poly", timePlayed: 469, points: 2, online: false },
+    //                 { id: 'player-3', name: "Ajax", timePlayed: 690, points: 3, online: true },
+    //                 { id: 'player-4', name: "Kiwi", timePlayed: 241, points: 1, online: false },
+    //                 { id: 'player-5', name: "Tony", timePlayed: 641, points: 7, online: false },
+                
+    //              ];
+
+    // console.table(_.sortBy(players, ['name', 'points']));
+    // console.log(_.sumBy(players, player => player.timePlayed));
+
+    
+
+            
