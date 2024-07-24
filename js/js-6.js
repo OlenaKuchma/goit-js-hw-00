@@ -155,44 +155,107 @@
 
 //-----------------
 
-const showThis = function (a, b, c) {
-  console.log("showThis -> this", this);
-  console.log(a, b, c);
-};
+// const showThis = function (a, b, c) {
+//   console.log("showThis -> this", this);
+//   console.log(a, b, c);
+// };
 
-showThis();
-console.dir(showThis);
+// showThis();
+// console.dir(showThis);
 
-const oBjA = {
-  a: 1,
-  b: 2,
-};
+// const oBjA = {
+//   a: 1,
+//   b: 2,
+// };
 
-showThis.call(oBjA, 2, 5, 7);
-showThis.apply(oBjA, [2, 5, 7]);
+// showThis.call(oBjA, 2, 5, 7);
+// showThis.apply(oBjA, [2, 5, 7]);
 
-const oBjB = {
-  a: 1111,
-  b: 24444,
-};
+// const oBjB = {
+//   a: 1111,
+//   b: 24444,
+// };
 
-showThis.call(oBjB, 2, 5, 7);
+// showThis.call(oBjB, 2, 5, 7);
 
-const changeColor = function (color) {
-  console.log("changeColor -> this", this);
-  this.color = color;
-};
+// const changeColor = function (color) {
+//   console.log("changeColor -> this", this);
+//   this.color = color;
+// };
 
-const hat = {
-  color: "black",
-};
+// const hat = {
+//   color: "black",
+// };
 
-changeColor.call(hat, "orange");
-console.log(hat);
+// changeColor.call(hat, "orange");
+// console.log(hat);
 
-const sweater = {
-  color: "white",
-};
+// const sweater = {
+//   color: "white",
+// };
 
-changeColor.apply(sweater, ["olive"]);
-console.log(sweater);
+// changeColor.apply(sweater, ["olive"]);
+// console.log(sweater);
+
+// const changeHatColor = changeColor.bind(hat);
+// changeHatColor();
+// const changeSweaterColor = changeColor.bind(sweater);
+// changeSweaterColor();
+
+// ---------------------
+
+// const counter = {
+//   value: 0,
+
+//   increment(value) {
+//     console.log("increment -> this", this), (this.value += value);
+//   },
+
+//   decrement(value) {
+//     console.log("decrement -> this", this), (this.value -= value);
+//   },
+// };
+
+// const updateCounter = function (value, operation) {
+//   operation(value);
+// };
+
+// updateCounter(10, counter.increment.bind(counter));
+// updateCounter(5, counter.decrement.bind(counter));
+
+// console.log(counter);
+
+// ----------------
+
+// const counter = {
+//   value: 0,
+
+//   increment(value) {
+//     console.log("increment -> this", this), (this.value += 1);
+//   },
+
+//   decrement(value) {
+//     console.log("decrement -> this", this), (this.value -= 1);
+//   },
+// };
+
+// const decrementBtn = document.querySelector(".js-decrement");
+// const incrementBtn = document.querySelector(".js-increment");
+// const valueEl = document.querySelector(".js-value");
+
+// decrementBtn.textContent = "Зменшити";
+// incrementBtn.textContent = "Збільшити";
+
+// decrementBtn.addEventListener("click", function () {
+//   console.log("Clik on decrementBtn");
+//   counter.decrement();
+//   console.log(counter);
+//   valueEl.textContent = counter.value;
+// });
+
+// incrementBtn.addEventListener("click", function () {
+//   console.log("Clik on incrementBtn");
+//   counter.increment();
+//   console.log(counter);
+//   valueEl.textContent = counter.value;
+// });
