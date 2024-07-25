@@ -64,3 +64,17 @@ img {
   letter-spacing: inherit;
   margin: 8px;
 }
+
+.first-list {
+  background-color: yellowgreen;
+}
+
+.super-cool {
+  width: 200px;
+  height: 50px;
+  background-color: blueviolet;
+}
+
+.curent {
+  color: red;
+}

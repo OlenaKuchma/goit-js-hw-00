@@ -1,13 +1,13 @@
-console.log(document);
-console.dir(document);
+// console.log(document);
+// console.dir(document);
 
-const firstElementDiv = document.querySelector("div");
-console.log("firstElementDiv", firstElementDiv);
-console.dir("firstElementDiv", firstElementDiv);
+// const firstElementDiv = document.querySelector("div");
+// console.log("firstElementDiv", firstElementDiv);
+// console.dir("firstElementDiv", firstElementDiv);
 
-const allElementLi = document.querySelectorAll("li");
-console.log("allElementLi", allElementLi);
-console.dir("allElementLi", allElementLi);
+// const allElementLi = document.querySelectorAll("li");
+// console.log("allElementLi", allElementLi);
+// console.dir("allElementLi", allElementLi);
 
 const refs = {
   seveBtn: document.querySelector(".save-btn"),
@@ -24,30 +24,47 @@ console.log(refs);
 console.log(refs.imgEl.src);
 console.log(refs.imgEl);
 
-// refs.imgEl.src =
-//   "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSAOnLXSaPbc4K0IId0dSTI050OfwusYAyfQzMiCF6mrwNPVdmN";
+// // refs.imgEl.src =
+// //   "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSAOnLXSaPbc4K0IId0dSTI050OfwusYAyfQzMiCF6mrwNPVdmN";
 
-const clickOnChangeBtn = function () {
-  refs.imgEl.src =
-    "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSAOnLXSaPbc4K0IId0dSTI050OfwusYAyfQzMiCF6mrwNPVdmN";
-  refs.imgEl.alt = "Новий котик";
-  refs.imgTextEl.textContent = "The new Best Cat";
-};
+// const clickOnChangeBtn = function () {
+//   refs.imgEl.src =
+//     "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSAOnLXSaPbc4K0IId0dSTI050OfwusYAyfQzMiCF6mrwNPVdmN";
+//   refs.imgEl.alt = "Новий котик";
+//   refs.imgTextEl.textContent = "The new Best Cat";
+// };
 
-refs.changeBtn.addEventListener("click", clickOnChangeBtn);
+// refs.changeBtn.addEventListener("click", clickOnChangeBtn);
 
-console.log(refs.imgEl.src);
-console.log(refs.imgEl.getAttribute("src"));
+// console.log(refs.imgEl.src);
+// console.log(refs.imgEl.getAttribute("src"));
 
-// refs.imgEl.removeAttribute("src");
+// // refs.imgEl.removeAttribute("src");
 
-const actionsBtn = document.querySelectorAll(".js-action button");
-console.log(actionsBtn[0].dataset.action);
-console.log(actionsBtn[1].dataset.action);
-console.log(actionsBtn[2].dataset.action);
+// const actionsBtn = document.querySelectorAll(".js-action button");
+// console.log(actionsBtn[0].dataset.action);
+// console.log(actionsBtn[1].dataset.action);
+// console.log(actionsBtn[2].dataset.action);
 
-refs.seveBtn.addEventListener("click", () => {
+// refs.inputEl.value = "";
 
-refs.inputEl = 
+// refs.seveBtn.addEventListener("click", () => {
+//   refs.outputEl.textContent = refs.inputEl.value;
+// });
 
-});
+// const firstNavEl = document.querySelector(".first-list");
+// console.log(firstNavEl.classList);
+// firstNavEl.addEventListener("click", () => {
+//   // firstNavEl.classList.add("super-cool");
+//   //  firstNavEl.classList.remove("super-cool");
+//   firstNavEl.classList.toggle("super-cool");
+//   // firstNavEl.classList.replace("first-list", "super-cool");
+// });
+// // console.log(firsNavEl.classList.contains("first-list"));
+
+const curentPageUrl = "./first";
+
+const linkEl = document.querySelector(`.first-a[href="${curentPageUrl}"]`);
+linkEl.classList.add("curent");
+
+console.log(linkEl);
