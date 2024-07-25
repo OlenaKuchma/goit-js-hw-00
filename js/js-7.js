@@ -98,38 +98,116 @@
 
 // -----------------
 
-class Car1 {
-  static description = "Клас, що описує авто";
+// class Car1 {
+//   static description = "Клас, що описує авто";
 
-  static LogInfo(carObj) {
-    console.log("Car1.logInfo -> carObj", carObj);
-  }
+//   static LogInfo(carObj) {
+//     console.log("Car1.logInfo -> carObj", carObj);
+//   }
 
-  constructor({ brand, model, price } = {}) {
-    console.log(this);
-    this.brand = brand;
-    this.model = model;
-    this.price = price;
-  }
+//   #test = "test";
+//   test2 = "test2";
 
-  changePrice(newPrice) {
-    this.price = newPrice;
-  }
+//   constructor({ brand, model, price } = {}) {
+//     console.log(this);
+//     this.brand = brand;
+//     this._model = model;
+//     this.price = price;
+//   }
 
-  updatemodel(newModal) {
-    this.model = newModal;
-  }
-}
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//   }
 
-console.log(Car1);
+//   updatemodel(newModal) {
+//     this.model = newModal;
+//   }
 
-const myNewCar = new Car1({ brand: "Audi", model: "Q3", price: 35000 });
+//   // setModel(newModel) {
+//   //   return (this.model = newModel);
+//   // }
 
-console.log(myNewCar);
+//   set model(newModel) {
+//     return (this._model = newModel);
+//   }
 
-myNewCar.changePrice(123456);
-myNewCar.updatemodel("A7");
+//   // getModel() {
+//   //   return this.model;
+//   // }
 
-console.log(myNewCar);
+//   get model() {
+//     return this._model;
+//   }
+// }
 
-Car1.LogInfo(myNewCar);
+// console.log(Car1);
+
+// const myNewCar = new Car1({ brand: "Audi", model: "Q3", price: 35000 });
+
+// console.log(myNewCar);
+
+// myNewCar.changePrice(123456);
+// myNewCar.updatemodel("A7");
+
+// console.log(myNewCar);
+
+// console.log(myNewCar.model);
+// myNewCar.model = "f16";
+
+// Car1.LogInfo(myNewCar);
+
+// -----------------
+
+// class Hero {
+//   constructor(name = "Hero", xp = 0) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
+//   gainXp(amount) {
+//     this.xp += amount;
+//     console.log(`This ${this.name} take ${this.xp}`);
+//   }
+// }
+
+// class Warior extends Hero {
+//   constructor(name, xp, vearpon) {
+//     super(name, xp);
+
+//     this.vearpon = vearpon;
+//   }
+
+//   attack() {
+//     console.log(`This ${this.name} attack whit ${this.vearpon}`);
+//   }
+// }
+
+// class Mag extends Hero {
+//   constructor(name, xp, spells) {
+//     super(name, xp);
+
+//     this.spells = spells;
+//   }
+
+//   magic() {
+//     console.log(`This ${this.name} attack whit ${this.spells}`);
+//   }
+// }
+
+// const mango = new Warior("Mango", 1000, "fire");
+
+// const magicHero = new Mag("magicHero", 200000, "magic skeels");
+
+// console.log(mango);
+
+// mango.attack(magicHero);
+// mango.gainXp(1000000);
+
+// console.log(magicHero);
+
+// magicHero.magic(mango);
+// magicHero.gainXp(1000000000);
+
+// console.log(mango.__proto__ === Warior.prototype);
+// console.log(Object.getPrototypeOf(mango) === Warior.prototype);
+// console.log("Warior.prototype", Warior.prototype);
+// console.log(Warior.prototype.__proto__ === Hero.prototype);
