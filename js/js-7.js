@@ -81,14 +81,14 @@
 
 // User.message = "Im static property of User";
 
-// User.logInfo = function (obj) {
+// User.LogInfo = function (obj) {
 //   console.log(obj);
 //   console.log(obj.name);
 //   console.log(obj.mail);
 //   console.log(obj.pasword);
 // };
 
-// User.logInfo(mango);
+// User.LogInfo(mango);
 
 // // ---------------------
 // // const oBjA = {
@@ -100,8 +100,9 @@
 
 class Car1 {
   static description = "Клас, що описує авто";
-  static logInfo(carOb) {
-    console.log("Car.logInfo -> carOb", carObj);
+
+  static LogInfo(carObj) {
+    console.log("Car1.logInfo -> carObj", carObj);
   }
 
   constructor({ brand, model, price } = {}) {
@@ -119,6 +120,7 @@ class Car1 {
     this.model = newModal;
   }
 }
+
 console.log(Car1);
 
 const myNewCar = new Car1({ brand: "Audi", model: "Q3", price: 35000 });
@@ -129,3 +131,5 @@ myNewCar.changePrice(123456);
 myNewCar.updatemodel("A7");
 
 console.log(myNewCar);
+
+Car1.LogInfo(myNewCar);
