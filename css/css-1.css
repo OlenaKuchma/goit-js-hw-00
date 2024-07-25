@@ -1,6 +1,6 @@
-body {
+/* body {
   font-family: sans-serif;
-}
+} */
 
 button {
   margin: 10px;
@@ -9,7 +9,7 @@ button {
   color: pointer;
 }
 
-.counter {
+/* .counter {
   display: flex;
   align-items: center;
 }
@@ -18,4 +18,49 @@ button {
   margin: 0;
   font-size: 40px;
   font-family: monospace;
+} */
+
+/* ----------------------------------------------- */
+
+body {
+  margin: 16px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+}
+
+p {
+  overflow-wrap: anywhere;
+}
+
+input {
+  width: 100%;
+  max-width: 320px;
+  padding: 8px;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+ul {
+  width: 200px;
+  height: 100px;
+  padding: 8px;
+  background-color: grey;
+}
+
+li {
+  width: 100%;
+  height: 30px;
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 8px;
+  background-color: lightpink;
+}
+
+img {
+  width: 200px;
+  height: 250px;
+  font: inherit;
+  letter-spacing: inherit;
+  margin: 8px;
 }
