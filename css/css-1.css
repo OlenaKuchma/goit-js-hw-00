@@ -180,33 +180,33 @@ button:hover {
 
 /* -------------------другий інпут */
 
-label {
+/* label {
   display: block;
   margin-bottom: 10px;
 }
 
 /* Стилі для input текстового поля */
-input[type="text"] {
+/* input[type="text"] {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none; /* Видаляє стандартний обвід при фокусі */
   transition: border-color 0.3s ease; /* Додає плавний перехід кольору рамки */
-}
+} */
 
 /* Стилі для input при фокусі */
-input[type="text"]:focus {
+/* input[type="text"]:focus {
   border-color: #007bff; /* Змінює колір рамки при фокусі */
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Додає тінь при фокусі */
-}
+} */
 
 /* Стилі для чекбокса */
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   margin-right: 5px;
-}
+} */
 
 /* Стилі для кнопки */
-button {
+/* button {
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -214,10 +214,37 @@ button {
   border-radius: 4px;
   cursor: not-allowed;
   transition: background-color 0.3s ease; /* Додає плавний перехід кольору фону */
-}
+} */
 
 /* Стилі для кнопки при активації */
-button:enabled {
+/* button:enabled {
   cursor: pointer;
   background-color: #0056b3;
+} */ */
+
+
+/* події клавіатури */
+
+/* Стилі для кнопки */
+.js-clear {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.js-clear:hover {
+  background-color: #0056b3;
+}
+
+/* Стилі для абзацу виходу */
+.js-output {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+  background-color: aquamarine;
 }

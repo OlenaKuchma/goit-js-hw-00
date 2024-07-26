@@ -31,12 +31,12 @@
 
 // ------------------------------новий інпут
 
-const refs = {
-  input: document.querySelector(".js-input"),
-  nameLable: document.querySelector(".js-button > span"),
-  licenseChekbox: document.querySelector(".js-license"),
-  btn: document.querySelector(".js-button"),
-};
+// const refs = {
+//   input: document.querySelector(".js-input"),
+//   nameLable: document.querySelector(".js-button > span"),
+//   licenseChekbox: document.querySelector(".js-license"),
+//   btn: document.querySelector(".js-button"),
+// };
 
 // refs.input.addEventListener("focus", onInputFocus);
 // refs.input.addEventListener("blur", onInputBlur);
@@ -50,16 +50,40 @@ const refs = {
 //   console.log("Інпут втратив фокус - подія blur");
 // }
 
-refs.input.addEventListener("input", onInputChange);
-refs.licenseChekbox.addEventListener("change", onlicenseChekboxChange);
+// refs.input.addEventListener("input", onInputChange);
+// refs.licenseChekbox.addEventListener("change", onlicenseChekboxChange);
 
-function onInputChange(event) {
-  console.log(event.currentTarget.value);
-  refs.nameLable.textContent = event.currentTarget.value;
+// function onInputChange(event) {
+//   console.log(event.currentTarget.value);
+//   refs.nameLable.textContent = event.currentTarget.value;
+// }
+
+// function onlicenseChekboxChange(event) {
+//   console.log(event.currentTarget.checked);
+
+//   refs.btn.disabled = !event.currentTarget.checked;
+// }
+
+// ------------------події клавіатури
+
+const refs = {
+  output: document.querySelector(".js-output"),
+  clearBtn: document.querySelector(".js-clear"),
+};
+
+// window.addEventListener("keydown", onKeyPress);
+window.addEventListener("keypress", onKeyPress);
+// window.addEventListener("keyup", onKeyPress);
+
+refs.clearBtn.addEventListener("click", onClearOutput);
+
+function onKeyPress(event) {
+  console.log("event.code", event.code);
+  console.log("event.key", event.key);
+
+  refs.output.textContent += event.key;
 }
 
-function onlicenseChekboxChange(event) {
-  console.log(event.currentTarget.checked);
-
-  refs.btn.disabled = !event.currentTarget.checked;
+function onClearOutput(params) {
+  refs.output.textContent = "";
 }
