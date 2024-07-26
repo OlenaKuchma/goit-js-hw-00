@@ -1,13 +1,14 @@
-body {
+/* body {
   font-family: sans-serif;
 } */
 
-button {
+/* button {
   margin: 10px;
   font-size: 16px;
   font-family: inherit;
   color: pointer;
-}
+} */
+*/
 
 /* .counter {
   display: flex;
@@ -90,15 +91,91 @@ img {
 }
 
 th {
-  background-color: #4caf50; /* Зелений фон для заголовків */
-  color: white; /* Білий текст для заголовків */
-  padding: 10px;
-  text-align: left;
-}
-
+  /* background-color: #4caf50; /* Зелений фон для заголовків */
+  /* color: white; /* Білий текст для заголовків */
+  /* padding: 10px;
+  text-align: left; 
+} */ */
+/* 
 td {
   background-color: grey; /* Зелений фон для заголовків */
-  color: white; /* Білий текст для заголовків */
-  padding: 10px;
+  /* color: white; /* Білий текст для заголовків */
+  /* padding: 10px;
   text-align: left;
+}  */
+
+
+/* ------------------------інпут форма */
+
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.subscription-options {
+  margin: 10px 0;
+}
+
+.subscription-options label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 } */
+
+
+/* -------------------другий інпут */
