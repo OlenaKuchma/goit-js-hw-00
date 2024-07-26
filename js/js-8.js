@@ -79,38 +79,78 @@
 
 // -----------------create
 
-const titelEl = document.createElement("h1");
+// const titelEl = document.createElement("h1");
 
-titelEl.classList.add("page-title");
-titelEl.textContent = "Заголовок сторінки";
+// titelEl.classList.add("page-title");
+// titelEl.textContent = "Заголовок сторінки";
 
-console.log(titelEl);
+// console.log(titelEl);
 
-console.log(document.body);
+// console.log(document.body);
 
-document.body.appendChild(titelEl);
+// // document.body.appendChild(titelEl);
 
-const imgElement = document.createElement("img");
-imgElement.src =
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Zoo_Wuppertal_Schwarzfusskatze.jpg/258px-Zoo_Wuppertal_Schwarzfusskatze.jpg";
-imgElement.alt = "foto";
-imgElement.width = 640;
+// const imgElement = document.createElement("img");
+// imgElement.src =
+//   "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Zoo_Wuppertal_Schwarzfusskatze.jpg/258px-Zoo_Wuppertal_Schwarzfusskatze.jpg";
+// imgElement.alt = "foto";
+// imgElement.width = 640;
 
-document.body.appendChild(imgElement);
+// // document.body.appendChild(imgElement);
 
-const newLiEl = document.createElement("li");
-newLiEl.classList.add = "first-list";
+// // titelEl.appendChild(imgElement);
 
-const newALi = document.createElement("a");
-newALi.classList.add("first-a");
-newALi.textContent = "Нава сторінка";
-newALi.href = "/new";
+// const heroEl = document.querySelector(".hero");
+// // heroEl.appendChild(titelEl);
+// // heroEl.appendChild(imgElement);
 
-newLiEl.appendChild(newALi);
+// heroEl.append(titelEl, imgElement);
 
-console.log(newLiEl);
+// const newLiEl = document.createElement("li");
+// newLiEl.classList.add = "first-list";
 
-const ulEl = document.querySelector(".list");
-ulEl.appendChild(newLiEl);
+// const newALi = document.createElement("a");
+// newALi.classList.add("first-a");
+// newALi.textContent = "Нава сторінка";
+// newALi.href = "/new";
 
-ulEl.insertBefore(newLiEl, ulEl.firstChild);
+// newLiEl.appendChild(newALi);
+
+// console.log(newLiEl);
+
+// const ulEl = document.querySelector(".list");
+// ulEl.appendChild(newLiEl);
+
+// ulEl.insertBefore(newLiEl, ulEl.firstElementChild);
+
+// --------------------------------
+
+const colorPicerOptions = [
+  { label: "blue", color: "#0000FF" },
+  { label: "yelow", color: "#FFFF00" },
+  { label: "green", color: "#008000" },
+  { label: "grey", color: "#808080" },
+  { label: "cyan", color: "#00FFFF" },
+  { label: "red", color: "#FF0000" },
+  { label: "purple", color: "#800080" },
+  { label: "magenta", color: "#FF00FF" },
+  { label: "Teal", color: "#008080" },
+];
+
+// const option = colorPicerOptions[0];
+
+const colorPicerOptionsEl = document.querySelector(".js-color-picker");
+
+const elements = colorPicerOptions.map((option) => {
+  const buttonEl = document.createElement("button");
+  buttonEl.type = "button";
+  buttonEl.textContent = option.label;
+  // buttonEl.classList.add("button");
+  buttonEl.style.backgroundColor = option.color;
+
+  return buttonEl;
+});
+
+colorPicerOptionsEl.append(...elements);
+
+console.log(elements);
