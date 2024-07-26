@@ -1,3 +1,7 @@
+import products from "./js-export.js";
+console.log(products);
+
+// -----------------------------------
 // console.log(document);
 // console.dir(document);
 
@@ -125,32 +129,113 @@
 
 // --------------------------------
 
-const colorPicerOptions = [
-  { label: "blue", color: "#0000FF" },
-  { label: "yelow", color: "#FFFF00" },
-  { label: "green", color: "#008000" },
-  { label: "grey", color: "#808080" },
-  { label: "cyan", color: "#00FFFF" },
-  { label: "red", color: "#FF0000" },
-  { label: "purple", color: "#800080" },
-  { label: "magenta", color: "#FF00FF" },
-  { label: "Teal", color: "#008080" },
-];
+// const colorPicerOptions = [
+//   { label: "blue", color: "#0000FF" },
+//   { label: "yelow", color: "#FFFF00" },
+//   { label: "green", color: "#008000" },
+//   { label: "grey", color: "#808080" },
+//   { label: "cyan", color: "#00FFFF" },
+//   { label: "red", color: "#FF0000" },
+//   { label: "purple", color: "#800080" },
+//   { label: "magenta", color: "#FF00FF" },
+//   { label: "Teal", color: "#008080" },
+// ];
 
-// const option = colorPicerOptions[0];
+// // const option = colorPicerOptions[0];
 
-const colorPicerOptionsEl = document.querySelector(".js-color-picker");
+// const colorPicerOptionsEl = document.querySelector(".js-color-picker");
 
-const elements = colorPicerOptions.map((option) => {
-  const buttonEl = document.createElement("button");
-  buttonEl.type = "button";
-  buttonEl.textContent = option.label;
-  // buttonEl.classList.add("button");
-  buttonEl.style.backgroundColor = option.color;
+// const elements = colorPicerOptions.map((option) => {
+//   const buttonEl = document.createElement("button");
+//   buttonEl.type = "button";
+//   buttonEl.textContent = option.label;
+//   // buttonEl.classList.add("button");
+//   buttonEl.style.backgroundColor = option.color;
 
-  return buttonEl;
-});
+//   return buttonEl;
+// });
 
-colorPicerOptionsEl.append(...elements);
+// colorPicerOptionsEl.append(...elements);
 
-console.log(elements);
+// console.log(elements);
+
+// const makeColorPicerOptions = (options) => {
+//   return options.map((option) => {
+//     const buttonEl = document.createElement("button");
+//     buttonEl.type = "button";
+//     buttonEl.textContent = option.label;
+//     buttonEl.style.backgroundColor = option.color;
+
+//     return buttonEl;
+//   });
+// };
+// const elements = makeColorPicerOptions(colorPicerOptions);
+// colorPicerOptionsEl.append(...elements);
+
+// ------------------------
+
+// const product = {
+//   name: "naomi",
+//   descriptions: "some text",
+//   price: 2000,
+//   available: true,
+//   onSale: true,
+// };
+
+// const productEl = document.createElement("arcticle");
+// productEl.classList.add("produckt");
+
+// const nameEl = document.createElement("h2");
+// nameEl.textContent = product.name;
+// nameEl.classList.add("product__name");
+
+// const descrEl = document.createElement("p");
+// descrEl.textContent = product.descriptions;
+// descrEl.classList.add("product__descr");
+
+// const priceEl = document.createElement("p");
+// priceEl.textContent = `Price: ${product.price}`;
+// priceEl.classList.add("product__price");
+
+// console.log(productEl);
+// console.log(nameEl);
+// console.log(descrEl);
+// console.log(priceEl);
+
+// productEl.append(nameEl, descrEl, priceEl);
+
+// console.log(productEl);
+
+// -------------------------------
+
+// const productContainerEl = document.querySelector(".js-product");
+
+// const makeProductCart = ({ name, descriptions, price }) => {
+//   const productEl = document.createElement("arcticle");
+//   productEl.classList.add("produckt");
+
+//   const nameEl = document.createElement("h2");
+//   nameEl.textContent = name;
+//   nameEl.classList.add("product__name");
+
+//   const descrEl = document.createElement("p");
+//   descrEl.textContent = descriptions;
+//   descrEl.classList.add("product__descr");
+
+//   const priceEl = document.createElement("p");
+//   priceEl.textContent = price;
+//   priceEl.classList.add("product__price");
+
+//   productEl.append(nameEl, descrEl, priceEl);
+
+//   return productEl;
+// };
+
+// console.log(makeProductCart(products[0]));
+
+// const elements = products.map(makeProductCart);
+// console.log(elements);
+
+// productContainerEl.append(...elements);
+
+// ---------------------------------------
