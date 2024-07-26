@@ -258,37 +258,37 @@ console.log(transactions);
 
 // ------------------import  transactions
 
-const makeTransactionMarkup = document.querySelector(".js-transaction-table");
+// const makeTransactionMarkup = document.querySelector(".js-transaction-table");
 
-const makeRowTransactionMarkup = ({
-  id,
-  amount,
-  date,
-  business,
-  name,
-  type,
-  account,
-}) => {
-  return `
-  <tr>
-    <td>${id}</td>
-    <td>${amount}</td>
-    <td>${date}</td>
-    <td>${business}</td>
-    <td>${name}</td>
-    <td>${type}</td>
-    <td>${account}</td>
-  </tr>
-`;
-};
+// const makeRowTransactionMarkup = ({
+//   id,
+//   amount,
+//   date,
+//   business,
+//   name,
+//   type,
+//   account,
+// }) => {
+//   return `
+//   <tr>
+//     <td>${id}</td>
+//     <td>${amount}</td>
+//     <td>${date}</td>
+//     <td>${business}</td>
+//     <td>${name}</td>
+//     <td>${type}</td>
+//     <td>${account}</td>
+//   </tr>
+// `;
+// };
 
-const makeBodyTransactionMarkup = transactions
-  .map(makeRowTransactionMarkup)
-  .join("");
+// const makeBodyTransactionMarkup = transactions
+//   .map(makeRowTransactionMarkup)
+//   .join("");
 
-console.log(makeBodyTransactionMarkup);
+// console.log(makeBodyTransactionMarkup);
 
-makeTransactionMarkup.insertAdjacentHTML(
-  "beforeend",
-  makeBodyTransactionMarkup
-);
+// makeTransactionMarkup.insertAdjacentHTML(
+//   "beforeend",
+//   makeBodyTransactionMarkup
+// );
