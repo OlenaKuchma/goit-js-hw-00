@@ -2,7 +2,7 @@
   font-family: sans-serif;
 } */
 
-button {
+/* button {
   margin: 10px;
   font-size: 16px;
   font-family: inherit;
@@ -29,7 +29,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-p {
+/* p {
   overflow-wrap: anywhere;
 }
 
@@ -77,4 +77,28 @@ img {
 
 .curent {
   color: red;
+} */
+*/
+
+/* ---------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+th {
+  background-color: #4caf50; /* Зелений фон для заголовків */
+  color: white; /* Білий текст для заголовків */
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  background-color: grey; /* Зелений фон для заголовків */
+  color: white; /* Білий текст для заголовків */
+  padding: 10px;
+  text-align: left;
 }

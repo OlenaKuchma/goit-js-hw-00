@@ -1,5 +1,8 @@
-import products from "./js-export.js";
-console.log(products);
+// import products from "./js-export.js";
+// console.log(products);
+
+import transactions from "./js-export.js";
+console.log(transactions);
 
 // -----------------------------------
 // console.log(document);
@@ -206,7 +209,7 @@ console.log(products);
 
 // console.log(productEl);
 
-// -------------------------------
+// -------------------------------import  products
 
 // const productContainerEl = document.querySelector(".js-product");
 
@@ -238,4 +241,54 @@ console.log(products);
 
 // productContainerEl.append(...elements);
 
-// ---------------------------------------
+// ---------------------------------------innerHtml insertAdjacentHTML
+
+// const titleEl = document.querySelector(".title");
+
+// console.log(titleEl.textContent);
+
+// console.log(titleEl.innerHTML);
+
+// // titleEl.innerHTML = '<a href=""> This is a </a>';
+// // titleEl.innerHTML = "";
+
+// titleEl.insertAdjacentHTML("afterbegin", '<a href=""> This is a </a>');
+
+// console.log(titleEl);
+
+// ------------------import  transactions
+
+const makeTransactionMarkup = document.querySelector(".js-transaction-table");
+
+const makeRowTransactionMarkup = ({
+  id,
+  amount,
+  date,
+  business,
+  name,
+  type,
+  account,
+}) => {
+  return `
+  <tr>
+    <td>${id}</td>
+    <td>${amount}</td>
+    <td>${date}</td>
+    <td>${business}</td>
+    <td>${name}</td>
+    <td>${type}</td>
+    <td>${account}</td>
+  </tr>
+`;
+};
+
+const makeBodyTransactionMarkup = transactions
+  .map(makeRowTransactionMarkup)
+  .join("");
+
+console.log(makeBodyTransactionMarkup);
+
+makeTransactionMarkup.insertAdjacentHTML(
+  "beforeend",
+  makeBodyTransactionMarkup
+);
