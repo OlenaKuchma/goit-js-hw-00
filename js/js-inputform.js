@@ -66,24 +66,50 @@
 
 // ------------------події клавіатури
 
+// const refs = {
+//   output: document.querySelector(".js-output"),
+//   clearBtn: document.querySelector(".js-clear"),
+// };
+
+// // window.addEventListener("keydown", onKeyPress);
+// window.addEventListener("keypress", onKeyPress);
+// // window.addEventListener("keyup", onKeyPress);
+
+// refs.clearBtn.addEventListener("click", onClearOutput);
+
+// function onKeyPress(event) {
+//   console.log("event.code", event.code);
+//   console.log("event.key", event.key);
+
+//   refs.output.textContent += event.key;
+// }
+
+// function onClearOutput(params) {
+//   refs.output.textContent = "";
+// }
+
+// -----------------------модалка
+
 const refs = {
-  output: document.querySelector(".js-output"),
-  clearBtn: document.querySelector(".js-clear"),
+  openModalBtn: document.querySelector('[data-action="open-modal"]'),
+  closeModalBtn: document.querySelector('[data-action="close-modal"]'),
+  backdrop: document.querySelector(".js-backdrop"),
 };
 
-// window.addEventListener("keydown", onKeyPress);
-window.addEventListener("keypress", onKeyPress);
-// window.addEventListener("keyup", onKeyPress);
+refs.openModalBtn.addEventListener("click", onOpenModal);
+refs.closeModalBtn.addEventListener("click", onCloseModal);
+refs.backdrop.addEventListener("click", onBackdropClick);
 
-refs.clearBtn.addEventListener("click", onClearOutput);
-
-function onKeyPress(event) {
-  console.log("event.code", event.code);
-  console.log("event.key", event.key);
-
-  refs.output.textContent += event.key;
+function onOpenModal() {
+  document.body.classList.add("show-modal");
 }
 
-function onClearOutput(params) {
-  refs.output.textContent = "";
+function onCloseModal() {
+  document.body.classList.remove("show-modal");
+}
+
+function onBackdropClick(event) {
+  if (event.currentTarget === event.target) {
+    onCloseModal();
+  }
 }
