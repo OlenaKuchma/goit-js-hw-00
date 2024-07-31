@@ -107,7 +107,7 @@ td {
 
 /* ------------------------інпут форма */
 
- body {
+ /* body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   display: flex;
@@ -115,7 +115,7 @@ td {
   align-items: center;
   height: 100vh;
   margin: 0;
-}
+} */
 /* 
 .form-container {
   background-color: #fff;
@@ -125,11 +125,11 @@ td {
   width: 300px;
 } */
 
-h2 {
+/* h2 {
   margin-bottom: 20px;
   text-align: center;
   color: #333;
-}
+} */
 
 /* .form-group {
   margin-bottom: 15px;
@@ -162,7 +162,7 @@ input[type="radio"] {
   margin-right: 10px;
 } */
 
-button {
+/* button {
   width: 100%;
   padding: 10px;
   background-color: #4caf50;
@@ -175,7 +175,7 @@ button {
 
 button:hover {
   background-color: #45a049;
-} 
+}  */
 
 
 /* -------------------другий інпут */
@@ -251,7 +251,7 @@ button:hover {
 
 /*   <!-- ---------------модалка --> */
 
-body.show-modal .modal {
+/* body.show-modal .modal {
   transform: scale(1);
 }
 
@@ -299,4 +299,170 @@ pointer-events: initial;
 p {
   font-family: sans-serif;
   color: #333;
+} */
+
+/* /-------------------------- */
+
+/* #parent {
+  background-color: lightblue;
+  padding: 10px;
 }
+
+#child {
+  background-color: lightgreen;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#inner-child {
+  background-color: lightcoral;
+  padding: 10px;
+  margin-top: 10px;
+} */
+
+
+/* -----------------button */
+/* 
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.js-add-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.js-add-btn:hover {
+  background-color: #45a049;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container button {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #007B9A;
+}
+
+hr {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+} */
+
+
+/* --------------------------BUTTONS----------------- */
+/* ul.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+} */
+/* 
+.tags__item {
+  margin: 0;
+
+  outline: 2px solid green;
+}
+
+.tags__btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 14px;
+
+
+}
+.tags__btn--active {
+  background-color: brown;
+  color: #fff;
+  
+} */
+
+/* .tags__btn:hover {
+  background-color: #e0e0e0;
+  border-color: #999;
+} */
+
+/* .tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 8px;
+  height: 100px;
+  background-color: beige;
+  list-style: none;
+  user-select: none;
+  outline: 2px solid red;
+
+} */
+
+/* ----------------COLOR PICKER */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+
+.color-card {
+  flex: 1 1 calc(20% - 10px); /* Дозволяє карткам займати 20% ширини контейнера мінус 10px для врахування проміжків */
+  max-width: calc(20% - 10px); /* Встановлює максимальну ширину */
+  height: 150px; /* Встановлює фіксовану висоту для карток */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+}
+.color-card.is-active {
+  transform: perspective(400px) rotateX(20deg) ;
+}
+
+
+.color-swatch {
+  width: 100%;
+  height: 100px;
+}
+
+.color-meta {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+
