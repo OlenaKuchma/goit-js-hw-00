@@ -191,7 +191,7 @@ button:hover {
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none; /* Видаляє стандартний обвід при фокусі */
-  transition: border-color 0.3s ease; /* Додає плавний перехід кольору рамки */
+ ?/* Додає плавний перехід кольору рамки */
 } */
 
 /* Стилі для input при фокусі */
@@ -421,7 +421,7 @@ hr {
 
 /* ----------------COLOR PICKER */
 
-body {
+/* body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -437,9 +437,9 @@ body {
 
 .color-card {
   flex: 1 1 calc(20% - 10px); /* Дозволяє карткам займати 20% ширини контейнера мінус 10px для врахування проміжків */
-  max-width: calc(20% - 10px); /* Встановлює максимальну ширину */
-  height: 150px; /* Встановлює фіксовану висоту для карток */
-  display: flex;
+  /* max-width: calc(20% - 10px); /* Встановлює максимальну ширину */
+  /* height: 150px; Встановлює фіксовану висоту для карток */
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -464,5 +464,28 @@ body {
   text-align: center;
   font-size: 12px;
   color: #333;
+} */ */
+ */
+
+ /* -------------------------------------------------------- */
+/* .feed {
+  list-style: none;
+}
+.feed li:not(:last-child) {
+  margin-bottom: 32px;
 }
 
+ .feed img {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 50 linear 10;
+  width: 640px;
+  height: 480px;
+  object-fit: cover;
+  
+ }
+
+ .feed img.appear {
+  transform: translateX(0);
+  opacity: 1;
+ } */
